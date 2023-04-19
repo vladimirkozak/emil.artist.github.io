@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .navigation {
+    &__list {
+      display: flex;
+      list-style: none;
+    }
+
+    &__item {
+      margin-left: 10px;
+    }
+
+    &__link {
+      
+    }
+  }
+}
+
+.active {
+  text-decoration: underline;
+}
