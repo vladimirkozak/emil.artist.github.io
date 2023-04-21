@@ -1,6 +1,10 @@
+import './Footer.scss';
+
 const Footer = () => {
   return (
-    <div>footer</div>
+    <footer className="footer">
+      © 2023 Emil.artist
+    </footer>
   );
 };
 
