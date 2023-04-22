@@ -1,0 +1,12 @@
+.not-found {
+  height: calc(100vh - 134px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__status {
+    font-size: 48px;
+  }
+
+}

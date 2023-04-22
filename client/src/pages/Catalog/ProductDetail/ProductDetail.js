@@ -17,7 +17,7 @@ const ProductDetail = () => {
   return (
     <section>
       <h1>product detail</h1>
-      <p>{product.title}</p>
+      <p>{product?.title}</p>
     </section>
   );
 };

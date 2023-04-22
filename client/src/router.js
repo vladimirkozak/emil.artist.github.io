@@ -3,6 +3,7 @@ import Layout from "./Layout/Layout";
 import Home from "./pages/Home/Home";
 import Catalog from "./pages/Catalog/Catalog";
 import ProductDetail from "./pages/Catalog/ProductDetail/ProductDetail";
+import NotFound from "./pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/catalog/:id',
         element: <ProductDetail />
+      },
+      {
+        path: '*',
+        element: <NotFound />
       },
     ],
   },
