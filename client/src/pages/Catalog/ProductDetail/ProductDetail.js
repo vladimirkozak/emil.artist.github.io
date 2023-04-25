@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const ProductDetail = () => {
   const params = useParams();
@@ -10,6 +11,8 @@ const ProductDetail = () => {
 
   const product = DUMMY_CATALOG.find(product => product.id === params.id);
 
+  const { t, i18n: {changeLanguage} } = useTranslation();
+
   if (!product) {
 
   }
@@ -17,7 +20,11 @@ const ProductDetail = () => {
   return (
     <section>
       <h1>product detail</h1>
+      {t('description.part1')}
       <p>{product?.title}</p>
+
+      <button onClick={() => changeLanguage("en")}>EN</button>
+      <button onClick={() => changeLanguage("ru")}>RU</button>
     </section>
   );
 };
