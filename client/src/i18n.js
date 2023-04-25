@@ -23,6 +23,10 @@ i18n
             catalog: 'Catalog',
             contacts: 'Info',
           },
+          notFound: {
+            error: 'Error',
+            msg: 'Page not found.',
+          },
         }
       },
       ru: {
@@ -30,6 +34,10 @@ i18n
           navbar: {
             catalog: 'Каталог',
             contacts: 'Инфо',
+          },
+          notFound: {
+            error: 'Ошибка',
+            msg: 'Страница не найдена.',
           },
         }
       },

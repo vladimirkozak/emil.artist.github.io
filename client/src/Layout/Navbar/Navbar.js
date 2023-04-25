@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import './Navbar.scss';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="wrapper">
       <header className="header">
@@ -21,7 +24,7 @@ const Navbar = () => {
                 activeClassName='active'
                 className="navigation__link"
               >
-                Catalog
+                {t('navbar.catalog')}
               </NavLink>
             </li>
             <li className="navigation__item">
@@ -30,7 +33,7 @@ const Navbar = () => {
                 activeClassName='active'
                 className="navigation__link"
               >
-                Info
+                {t('navbar.contacts')}
               </NavLink>
             </li>
           </ul>
