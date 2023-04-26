@@ -24,7 +24,7 @@ const ProductDetail = () => {
       <p>{product?.title}</p>
 
       <button onClick={() => changeLanguage("en")}>EN</button>
-      <button onClick={() => changeLanguage("ru")}>RU</button>
+      <button onClick={() => changeLanguage("pl")}>PL</button>
     </section>
   );
 };

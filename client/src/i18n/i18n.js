@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { resources } from './resources';
 
 i18n
   // detect user language
@@ -16,32 +17,7 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
-    resources: {
-      en: {
-        translation: {
-          navbar: {
-            catalog: 'Catalog',
-            contacts: 'Info',
-          },
-          notFound: {
-            error: 'Error',
-            msg: 'Page not found.',
-          },
-        }
-      },
-      ru: {
-        translation: {
-          navbar: {
-            catalog: 'Каталог',
-            contacts: 'Инфо',
-          },
-          notFound: {
-            error: 'Ошибка',
-            msg: 'Страница не найдена.',
-          },
-        }
-      },
-    }
+    resources: resources,
   });
 
 export default i18n;
