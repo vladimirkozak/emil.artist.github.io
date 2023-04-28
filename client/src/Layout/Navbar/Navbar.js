@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import './Navbar.scss';
 import { useTranslation } from 'react-i18next';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 const Navbar = () => {
   const { t, i18n: {changeLanguage} } = useTranslation();
@@ -49,6 +50,11 @@ const Navbar = () => {
                 onClick={onTapLangHandler}
               >
                 {lang}
+              </button>
+            </li>
+            <li className="navigation__item">
+              <button className='navigation__btn-lang'>
+                <ShoppingBasketIcon />
               </button>
             </li>
           </ul>
