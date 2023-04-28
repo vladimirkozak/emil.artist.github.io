@@ -1,9 +1,16 @@
+import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import './Navbar.scss';
 import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
-  const { t } = useTranslation();
+  const { t, i18n: {changeLanguage} } = useTranslation();
+  const [lang, setLang] = useState('pl');
+
+  const onTapLangHandler = () => {
+    setLang(lang === 'pl' ? 'en' : 'pl');
+    changeLanguage(lang);
+  };
 
   return (
     <div className="wrapper">
@@ -35,6 +42,14 @@ const Navbar = () => {
               >
                 {t('navbar.contacts')}
               </NavLink>
+            </li>
+            <li className="navigation__item">
+              <button
+                className='navigation__btn-lang'
+                onClick={onTapLangHandler}
+              >
+                {lang}
+              </button>
             </li>
           </ul>
         </nav>
