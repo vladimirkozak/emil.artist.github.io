@@ -54,7 +54,10 @@ const Navbar = () => {
             </li>
             <li className="navigation__item">
               <button className='navigation__btn-lang'>
-                <ShoppingBasketIcon />
+                <div className='navigation__wrap'>
+                  <span>3</span>
+                  <ShoppingBasketIcon fontSize='small' />
+                </div>
               </button>
             </li>
           </ul>
