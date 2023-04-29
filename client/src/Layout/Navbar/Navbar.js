@@ -14,8 +14,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="wrapper">
-      <header className="header">
+    <header className="header">
+      <div className="wrapper">
         <div >
           <NavLink
             to='/'
@@ -62,8 +62,8 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
 
