@@ -9,6 +9,9 @@ export const resources = {
         error: 'Error',
         msg: 'Page not found.',
       },
+      cart: {
+        addToCart: 'Add to cart',
+      },
     }
   },
   pl: {
@@ -20,6 +23,9 @@ export const resources = {
       notFound: {
         error: 'Błąd',
         msg: 'Strona nie znaleziona.',
+      },
+      cart: {
+        addToCart: 'Dodaj do koszyka',
       },
     }
   },

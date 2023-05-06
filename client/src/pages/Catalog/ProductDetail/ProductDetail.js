@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import './ProductDetail.scss';
 import { useState } from "react";
+import Button from "../../../components/UI/Button/Button";
 
 const ProductDetail = () => {
   const params = useParams();
@@ -15,11 +16,13 @@ const ProductDetail = () => {
 
   const product = DUMMY_CATALOG.find(product => product.id === params.id);
 
-  const { t, i18n: {changeLanguage} } = useTranslation();
+  const { t } = useTranslation();
 
   if (!product) {
 
   }
+
+  const onClickHandler = () => {};
 
   return (
     <section className="product">
@@ -29,16 +32,19 @@ const ProductDetail = () => {
             <img
               src={DUMMY_CATALOG[0].img}
               onClick={() => setSelectedImg(0)}
-              alt=""
+              alt="detail_img"
             />
             <img
               src={DUMMY_CATALOG[1].img}
               onClick={() => setSelectedImg(1)}
-              alt=""
+              alt="detail_img"
             />
           </div>
           <div className="mainImg">
-            <img src={DUMMY_CATALOG[selectedImg].img} />
+            <img
+              src={DUMMY_CATALOG[selectedImg].img}
+              alt="main_detail_img"
+            />
           </div>
         </div>
         <div className="right">
@@ -56,7 +62,10 @@ const ProductDetail = () => {
             {quantity}
             <button onClick={() => setQuantity(prev => prev + 1)}>+</button>
           </div>
-          <button className="add">add to cart</button>
+          <Button
+            title={t('cart.addToCart')}
+            onClick={onClickHandler}
+          />
           <p>
             Lorem Ipsum is simply dummy text of the printing and 
             Lorem Ipsum is simply dummy text of the printing and 
