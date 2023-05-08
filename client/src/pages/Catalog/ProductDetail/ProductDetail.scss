@@ -39,5 +39,47 @@
 
   .right {
     width: 44%;
+
+    .props {
+      max-width: 350px;
+    }
+
+    .select {
+      margin-top: 16px;
+    }
+
+    & .title {
+      font-size: 18px;
+    }
+
+    .quantity {
+      margin-top: 16px;
+
+      &__btn {
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        line-height: normal;
+        background-color: #999;
+      }
+
+      &__count {
+        width: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .add-to-cart {
+      margin-top: 16px;
+    }
+
+    .desc {
+      p {
+        font-size: 14px;
+      }
+    }
   }
 }

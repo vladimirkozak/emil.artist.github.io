@@ -1,6 +1,6 @@
-import './Button.scss';
+import './Btn.scss';
 
-const Button = ({ title, onClick }) => {
+const Btn = ({ title, onClick }) => {
   return (
     <button className='btn' onClick={onClick}>
       {title}
@@ -8,4 +8,4 @@ const Button = ({ title, onClick }) => {
   );
 };
 
-export default Button;
+export default Btn;
