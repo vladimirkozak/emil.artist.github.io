@@ -66,7 +66,7 @@ const ProductDetail = () => {
             <div className="select">
               <Box sx={{ minWidth: 120 }}>
                 <FormControl fullWidth size="small">
-                  <InputLabel id="demo-simple-select-label">Size</InputLabel>
+                  <InputLabel id="demo-simple-select-label">{t('catalog.size')}</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"

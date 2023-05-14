@@ -9,6 +9,9 @@ export const resources = {
         error: 'Error',
         msg: 'Page not found.',
       },
+      catalog: {
+        size: 'size',
+      },
       cart: {
         addToCart: 'Add to cart',
       },
@@ -23,6 +26,9 @@ export const resources = {
       notFound: {
         error: 'Błąd',
         msg: 'Strona nie znaleziona.',
+      },
+      catalog: {
+        size: 'rozmiar',
       },
       cart: {
         addToCart: 'Dodaj do koszyka',
