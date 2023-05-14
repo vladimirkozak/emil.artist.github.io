@@ -14,6 +14,8 @@ export const resources = {
       },
       cart: {
         addToCart: 'Add to cart',
+        yourCart: 'Your cart',
+        checkout: 'Check out',
       },
     }
   },
@@ -32,6 +34,8 @@ export const resources = {
       },
       cart: {
         addToCart: 'Dodaj do koszyka',
+        yourCart: 'Twój wózek',
+        checkout: 'wymeldować się',
       },
     }
   },

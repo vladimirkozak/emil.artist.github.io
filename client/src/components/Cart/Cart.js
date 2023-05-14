@@ -1,8 +1,11 @@
 import Btn from '../UI/Btn/Btn';
 import './Cart.scss';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { useTranslation } from 'react-i18next';
 
 const Cart = () => {
+  const { t } = useTranslation();
+
   const data = [
     {
       id: 'q1',
@@ -21,7 +24,7 @@ const Cart = () => {
 
   return (
     <div className='cart'>
-      <h3 className='cart__title'>Ваши товары</h3>
+      <h3 className='cart__title'>{t('cart.yourCart')}</h3>
       {data?.map(item => (
         <div
           key={item.id}
@@ -43,7 +46,7 @@ const Cart = () => {
         <span>$123</span>
       </div>
       <Btn
-        title={'check out'}
+        title={t('cart.checkout')}
       />
     </div>
   );
