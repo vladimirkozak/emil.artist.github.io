@@ -34,9 +34,40 @@ const Navbar = () => {
                 activeClassName='active'
                 className="navigation__link"
               >
-                {t('navbar.catalog')}
+                {t('navbar.shop')}
               </NavLink>
             </li>
+
+            <li className="navigation__item">
+              <NavLink
+                to='/calendar'
+                activeClassName='active'
+                className="navigation__link"
+              >
+                {t('navbar.calendar')}
+              </NavLink>
+            </li>
+
+            <li className="navigation__item">
+              <NavLink
+                to='/catalog'
+                activeClassName='active'
+                className="navigation__link"
+              >
+                {t('navbar.about')}
+              </NavLink>
+            </li>
+
+            <li className="navigation__item">
+              <NavLink
+                to='/catalog'
+                activeClassName='active'
+                className="navigation__link"
+              >
+                {t('navbar.FAQ')}
+              </NavLink>
+            </li>
+
             <li className="navigation__item">
               <NavLink
                 to='/contacts'
@@ -46,6 +77,11 @@ const Navbar = () => {
                 {t('navbar.contacts')}
               </NavLink>
             </li>
+          </ul>
+        </nav>
+
+        <div>
+          <ul className="navigation">
             <li className="navigation__item">
               <button
                 className='navigation__btn-lang'
@@ -66,7 +102,7 @@ const Navbar = () => {
               </button>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
       {openCart && <Cart />}
     </header>

@@ -1,20 +1,19 @@
+import Container from "../../components/containers/Container/Container";
+import Grid from "../../components/containers/Grid/Grid";
 import Product from "./Product/Product";
-
-const DUMMY_CATALOG = [
-  { id: 'q1', title: 't-short', desc: 'loremrfrvr vgrfgrefge', price: '100$', img: 'C:\Users\vladimir\Downloads\v1xwm0kqomnb2d2wd2esey56gesqlgvv.jpg' },
-  { id: 'q2', title: 'cup', desc: 'loremrfrvr vgrfgrefge', price: '20$', img: 'C:\Users\vladimir\Downloads\v1xwm0kqomnb2d2wd2esey56gesqlgvv.jpg' }
-];
+import { DUMMY_CATALOG } from "./testData/data/data";
 
 const Catalog = () => {
   return (
-    <div>
+    <Container>
       <h1>Catalog</h1>
-      <ul>
-        {DUMMY_CATALOG.map(product => (
+      <Grid>
+        {DUMMY_CATALOG.map((product) => (
           <Product
             key={product.id}
             id={product.id}
             title={product.title}
+            image={product.img}
           />
         ))}
         {/* <li>
@@ -26,8 +25,8 @@ const Catalog = () => {
         <li>
           <Link to='/catalog/3'>product 3</Link>
         </li> */}
-      </ul>
-    </div>
+      </Grid>
+    </Container>
   );
 };
 

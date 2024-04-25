@@ -5,6 +5,7 @@ import Catalog from "./pages/Catalog/Catalog";
 import ProductDetail from "./pages/Catalog/ProductDetail/ProductDetail";
 import NotFound from "./pages/NotFound/NotFound";
 import Contacts from "./pages/Contacts/Contacts";
+import Calendar from "./pages/Calendar/Calendar";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/catalog/:id',
         element: <ProductDetail />
+      },
+      {
+        path: '/calendar',
+        element: <Calendar />
       },
       {
         path: '/contacts',

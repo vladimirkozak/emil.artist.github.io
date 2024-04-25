@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
+import "./Product.scss";
 
-const Product = ({
-  id,
-  title,
-}) => {
+const Product = ({ id, title, image }) => {
   return (
-    <li>
-      <Link to={`/catalog/${id}`}>{title}</Link>
-    </li>
+    <Link to={`/catalog/${id}`}>
+      <div className="product">
+        {/* {title} */}
+        <img
+          src={require("../testData/images/b3fce3f4-b0e3-11ec-8b90-00505683661b.jpg")}
+          className="product__image"
+        />
+      </div>
+    </Link>
   );
 };
 

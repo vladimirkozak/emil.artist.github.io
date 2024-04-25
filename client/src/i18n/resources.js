@@ -2,7 +2,10 @@ export const resources = {
   en: {
     translation: {
       navbar: {
-        catalog: 'Shop',
+        shop: 'Shop',
+        calendar: 'Calendar',
+        about: 'About',
+        FAQ: 'FAQ',
         contacts: 'Contacts',
       },
       notFound: {
@@ -22,7 +25,7 @@ export const resources = {
   pl: {
     translation: {
       navbar: {
-        catalog: 'Sklep',
+        shop: 'Sklep',
         contacts: 'Łączność',
       },
       notFound: {
