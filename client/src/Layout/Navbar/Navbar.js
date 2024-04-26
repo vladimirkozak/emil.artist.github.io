@@ -4,11 +4,14 @@ import './Navbar.scss';
 import { useTranslation } from 'react-i18next';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import Cart from '../../components/Cart/Cart';
+import { Squash as Hamburger } from "hamburger-react";
+import NavMobile from './NavMobile/NavMobile';
 
 const Navbar = () => {
   const { t, i18n: {changeLanguage} } = useTranslation();
   const [lang, setLang] = useState('pl');
   const [openCart, setOpenCart] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const onTapLangHandler = () => {
     setLang(lang === 'pl' ? 'en' : 'pl');
@@ -17,6 +20,10 @@ const Navbar = () => {
 
   return (
     <header className="header">
+      <div className='humburger'>
+        <Hamburger toggled={isOpen} size={20} toggle={setOpen} color={'#fff'} />
+      </div>
+      {isOpen && <NavMobile />}
       <div className="wrapper">
         <div>
           <NavLink

@@ -1,0 +1,22 @@
+.navMobile {
+  background-color: #555;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+  }
+}

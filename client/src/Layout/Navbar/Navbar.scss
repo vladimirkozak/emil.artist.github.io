@@ -1,7 +1,6 @@
 .header {
   padding: 12px 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgba(242, 242, 242, 1);
 
@@ -21,7 +20,7 @@
 
     &__link {
       font-weight: 600;
-      color: #000;
+      color: #ffffff;
     }
 
     &__btn-lang {
@@ -31,6 +30,7 @@
       background-color: transparent;
       border: none;
       cursor: pointer;
+      color: #ffffff;
     }
 
     &__wrap {
@@ -50,9 +50,21 @@
 .logo {
   font-size: 28px;
   font-weight: 700;
-  color: #000;
+  color: #ffffff;
 }
 
 .navigation__link.active {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .humburger {
+    display: none;
+  }
 }
