@@ -14,7 +14,7 @@ const Navbar = () => {
   } = useTranslation();
   const [lang, setLang] = useState("pl");
   const [openCart, setOpenCart] = useState(false);
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const onTapLangHandler = () => {
     setLang(lang === "pl" ? "en" : "pl");
@@ -24,9 +24,14 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="humburger">
-        <Hamburger toggled={isOpen} size={20} toggle={setOpen} color={"#fff"} />
+        <Hamburger
+          toggled={isOpen}
+          size={20}
+          toggle={setIsOpen}
+          color={"#fff"}
+        />
       </div>
-      {isOpen && <NavMobile />}
+      {isOpen && <NavMobile setIsOpen={setIsOpen} />}
       <div className="wrapper">
         <div>
           <NavLink to="/" className="logo">
@@ -57,7 +62,7 @@ const Navbar = () => {
 
             <li className="navigation__item">
               <NavLink
-                to="/catalog"
+                to="/about"
                 activeClassName="active"
                 className="navigation__link"
               >
@@ -67,7 +72,7 @@ const Navbar = () => {
 
             <li className="navigation__item">
               <NavLink
-                to="/catalog"
+                to="/faq"
                 activeClassName="active"
                 className="navigation__link"
               >

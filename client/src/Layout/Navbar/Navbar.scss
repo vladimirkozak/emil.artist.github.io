@@ -53,8 +53,12 @@
   color: #ffffff;
 }
 
+.navigation__link {
+  transition: 0.2s color ease-in;
+}
+
 .navigation__link.active {
-  text-decoration: underline;
+  color: #b00000;
 }
 
 @media (max-width: 768px) {

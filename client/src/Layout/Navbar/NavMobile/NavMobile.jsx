@@ -4,11 +4,15 @@ import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
 import MotionLi from "../../../components/UI/MotionLi/MotionLi";
 
-const NavMobile = () => {
+const NavMobile = ({ setIsOpen }) => {
   const {
     t,
     i18n: { changeLanguage },
   } = useTranslation();
+
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="navMobile">
@@ -27,6 +31,7 @@ const NavMobile = () => {
                   to="/catalog"
                   activeClassName="active"
                   className="navMobile__link"
+                  onClick={handleCloseMenu}
                 >
                   {t("navbar.shop")}
                 </NavLink>
@@ -39,6 +44,7 @@ const NavMobile = () => {
                   to="/calendar"
                   activeClassName="active"
                   className="navMobile__link"
+                  onClick={handleCloseMenu}
                 >
                   {t("navbar.calendar")}
                 </NavLink>
@@ -48,9 +54,10 @@ const NavMobile = () => {
             <MotionLi indx={2}>
               <li className="navMobile__item">
                 <NavLink
-                  to="/catalog"
+                  to="/about"
                   activeClassName="active"
                   className="navMobile__link"
+                  onClick={handleCloseMenu}
                 >
                   {t("navbar.about")}
                 </NavLink>
@@ -60,9 +67,10 @@ const NavMobile = () => {
             <MotionLi indx={3}>
               <li className="navMobile__item">
                 <NavLink
-                  to="/catalog"
+                  to="/faq"
                   activeClassName="active"
                   className="navMobile__link"
+                  onClick={handleCloseMenu}
                 >
                   {t("navbar.FAQ")}
                 </NavLink>
@@ -75,6 +83,7 @@ const NavMobile = () => {
                   to="/contacts"
                   activeClassName="active"
                   className="navMobile__link"
+                  onClick={handleCloseMenu}
                 >
                   {t("navbar.contacts")}
                 </NavLink>
