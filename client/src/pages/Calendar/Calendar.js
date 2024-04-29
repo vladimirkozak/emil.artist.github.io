@@ -1,5 +1,5 @@
 const Calendar = () => {
-  return <div>Calendar</div>;
+  return <div style={{"color": "white"}}>Calendar</div>;
 };
 
 export default Calendar;

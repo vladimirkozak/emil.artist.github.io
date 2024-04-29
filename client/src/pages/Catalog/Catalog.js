@@ -6,7 +6,7 @@ import { DUMMY_CATALOG } from "./testData/data/data";
 const Catalog = () => {
   return (
     <Container>
-      <h1>Catalog</h1>
+      <h1 style={{"color": "white"}}>Catalog</h1>
       <Grid>
         {DUMMY_CATALOG.map((product) => (
           <Product

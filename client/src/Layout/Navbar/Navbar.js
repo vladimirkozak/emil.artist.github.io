@@ -24,6 +24,11 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="humburger">
+        <div>
+          <NavLink to="/" className="logo" onClick={() => setIsOpen(false)}>
+            Logo
+          </NavLink>
+        </div>
         <Hamburger
           toggled={isOpen}
           size={20}
@@ -105,7 +110,7 @@ const Navbar = () => {
             <li className="navigation__item">
               <button
                 className="navigation__btn-lang"
-                onClick={() => setOpenCart(!openCart)}
+                // onClick={() => setOpenCart(!openCart)}
               >
                 <div className="navigation__wrap">
                   <span>3</span>

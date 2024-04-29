@@ -1,10 +1,11 @@
 .navMobile {
   background-color: #000;
-  position: absolute;
+  position: fixed;
   top: 72px;
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: auto;
 
   &__list {
     display: flex;

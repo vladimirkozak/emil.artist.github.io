@@ -1,6 +1,6 @@
 const Contacts = () => {
   return (
-    <div>
+    <div style={{"color": "white"}}>
       contacts
     </div>
   );

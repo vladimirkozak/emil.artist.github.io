@@ -2,11 +2,13 @@ export const resources = {
   en: {
     translation: {
       navbar: {
+        home: 'Home',
         shop: 'Shop',
         calendar: 'Calendar',
         about: 'About',
         FAQ: 'FAQ',
         contacts: 'Contacts',
+        cart: 'Cart',
       },
       notFound: {
         error: 'Error',

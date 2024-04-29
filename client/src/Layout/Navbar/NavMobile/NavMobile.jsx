@@ -89,6 +89,19 @@ const NavMobile = ({ setIsOpen }) => {
                 </NavLink>
               </li>
             </MotionLi>
+
+            <MotionLi indx={5}>
+              <li className="navMobile__item">
+                <NavLink
+                  to="/cart"
+                  activeClassName="active"
+                  className="navMobile__link"
+                  onClick={handleCloseMenu}
+                >
+                  {t("navbar.cart")}
+                </NavLink>
+              </li>
+            </MotionLi>
           </ul>
         </motion.div>
       </AnimatePresence>

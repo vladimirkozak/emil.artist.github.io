@@ -1,5 +1,5 @@
 const About = () => {
-  return <>about</>;
+  return <div style={{"color": "white"}}>about</div>;
 };
 
 export default About;
