@@ -97,7 +97,7 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <div>
+        <div className="navigation__right">
           <ul className="navigation">
             <li className="navigation__item">
               <button

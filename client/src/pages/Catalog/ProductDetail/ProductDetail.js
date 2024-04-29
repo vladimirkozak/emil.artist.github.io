@@ -10,29 +10,13 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { DUMMY_CATALOG } from "../testData/data/data";
 
 const ProductDetail = () => {
   const params = useParams();
   const [selectedImg, setSelectedImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState("");
-
-  const DUMMY_CATALOG = [
-    {
-      id: "q1",
-      title: "t-short",
-      desc: "loremrfrvr vgrfgrefge",
-      price: "100$",
-      img: "https://shop-cdn1-2.vigbo.tech/shops/200037/products/21939930/images/3-42c5f6507fc01c346dddeca048608dbf.jpg",
-    },
-    {
-      id: "q2",
-      title: "cup",
-      desc: "loremrfrvr vgrfgrefge",
-      price: "20$",
-      img: "https://shop-cdn1-2.vigbo.tech/shops/200037/products/21898648/images/3-3865c05611f165c30207216d078c39f1.jpg",
-    },
-  ];
 
   const product = DUMMY_CATALOG.find((product) => product.id === params.id);
 

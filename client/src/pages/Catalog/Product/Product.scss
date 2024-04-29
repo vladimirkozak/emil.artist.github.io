@@ -10,10 +10,18 @@
 .discribe {
   margin-top: 12px;
   &__name {
+    margin-bottom: 10px;
     color: #fff;
   }
 
   &__price {
     color: #fff;
+  }
+}
+
+@media (max-width: 1610px) {
+  .discribe {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
