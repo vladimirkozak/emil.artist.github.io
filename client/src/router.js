@@ -8,7 +8,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import Calendar from "./pages/Calendar/Calendar";
 import About from "./pages/About/About";
 import FAQ from "./pages/FAQ/FAQ";
-import Cart from "./components/Cart/Cart";
+import Cart from "./pages/Cart/Cart";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         element: <Contacts />,
       },
       {
-        path: "/basket",
+        path: "/cart",
         element: <Cart />,
       },
       {

@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import { useTranslation } from "react-i18next";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import Cart from "../../components/Cart/Cart";
 import { Squash as Hamburger } from "hamburger-react";
 import NavMobile from "./NavMobile/NavMobile";
 
@@ -13,7 +12,6 @@ const Navbar = () => {
     i18n: { changeLanguage },
   } = useTranslation();
   const [lang, setLang] = useState("pl");
-  const [openCart, setOpenCart] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const onTapLangHandler = () => {
@@ -108,20 +106,22 @@ const Navbar = () => {
               </button>
             </li>
             <li className="navigation__item">
-              <button
-                className="navigation__btn-lang"
-                // onClick={() => setOpenCart(!openCart)}
+              <NavLink
+                to="/cart"
+                activeClassName="active"
+                className="navigation__link"
               >
-                <div className="navigation__wrap">
-                  <span>3</span>
-                  <ShoppingBasketIcon fontSize="small" />
-                </div>
-              </button>
+                <button className="navigation__btn-lang">
+                  <div className="navigation__wrap">
+                    <span>3</span>
+                    <ShoppingBasketIcon fontSize="small" />
+                  </div>
+                </button>
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
-      {openCart && <Cart />}
     </header>
   );
 };
