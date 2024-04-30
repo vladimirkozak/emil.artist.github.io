@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
         <Hamburger
           toggled={isOpen}
-          size={20}
+          size={22}
           toggle={setIsOpen}
           color={"#fff"}
         />

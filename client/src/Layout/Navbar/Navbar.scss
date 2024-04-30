@@ -3,10 +3,11 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 12px 0;
+  height: 64px;
   display: flex;
   align-items: center;
   background: #000;
+  border-bottom: 1px solid red;
 
   .navigation {
     display: flex;
