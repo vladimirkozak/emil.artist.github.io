@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import { useTranslation } from "react-i18next";
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { Squash as Hamburger } from "hamburger-react";
 import NavMobile from "./NavMobile/NavMobile";
 
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <button className="navigation__btn-lang">
                   <div className="navigation__wrap">
                     <span>3</span>
-                    <ShoppingBasketIcon fontSize="small" />
+                    <ShoppingBagIcon fontSize="small" />
                   </div>
                 </button>
               </NavLink>

@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   background: #000;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #fff;
 
   .navigation {
     display: flex;
@@ -20,7 +20,7 @@
     &__item {
       display: flex;
       align-items: center;
-      margin-left: 10px;
+      margin-left: 14px;
     }
 
     &__link {

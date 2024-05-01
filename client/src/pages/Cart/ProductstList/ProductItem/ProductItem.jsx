@@ -1,4 +1,5 @@
 import "./ProductItem.scss";
+import CloseIcon from "@mui/icons-material/Close";
 
 const ProductItem = ({ title, image, price }) => {
   return (
@@ -9,7 +10,10 @@ const ProductItem = ({ title, image, price }) => {
           <div>{title}</div>
           <p>{price}</p>
         </div>
-        <div>X</div>
+
+        <button className="cart-item__close">
+          <CloseIcon />
+        </button>
       </div>
     </div>
   );
