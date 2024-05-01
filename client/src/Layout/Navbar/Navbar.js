@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { Squash as Hamburger } from "hamburger-react";
 import NavMobile from "./NavMobile/NavMobile";
+import Counter from "@components/UI/Counter/Counter";
 
 const Navbar = () => {
   const {
@@ -113,7 +114,7 @@ const Navbar = () => {
               >
                 <button className="navigation__btn-lang">
                   <div className="navigation__wrap">
-                    <span>3</span>
+                    <Counter />
                     <ShoppingBagIcon fontSize="small" />
                   </div>
                 </button>

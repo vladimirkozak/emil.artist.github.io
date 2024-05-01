@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./ProductDetail.scss";
 import { useState } from "react";
-import Btn from "../../../components/UI/Btn/Btn";
+import Btn from "@components/UI/Btn/Btn";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";

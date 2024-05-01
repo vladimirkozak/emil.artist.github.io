@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./NavMobile.scss";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
-import MotionLi from "../../../components/UI/MotionLi/MotionLi";
+import MotionLi from "@components/UI/MotionLi/MotionLi";
 
 const NavMobile = ({ setIsOpen }) => {
   const {

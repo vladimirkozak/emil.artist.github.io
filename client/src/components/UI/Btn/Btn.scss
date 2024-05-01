@@ -1,11 +1,13 @@
+@import "@values/Colors.scss";
+
 .btn {
   width: 100%;
   min-height: 50px;
   padding: 15px 20px;
   font-weight: bold;
   border: none;
-  color: #fff;
-  background-color: #000;
+  color: $white;
+  background-color: $black;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.1s opacity ease-in-out;

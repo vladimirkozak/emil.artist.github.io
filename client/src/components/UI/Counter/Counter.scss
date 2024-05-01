@@ -1,0 +1,16 @@
+@import "@values/Colors.scss";
+
+.counter {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  border-radius: 50%;
+  color: $black;
+  background-color: $orange;
+}

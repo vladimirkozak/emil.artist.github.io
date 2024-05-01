@@ -1,3 +1,5 @@
+@import "@values/Colors.scss";
+
 .product {
   display: flex;
   flex-direction: column;
@@ -12,12 +14,12 @@
   &__name {
     margin-bottom: 10px;
     text-align: center;
-    color: #fff;
+    color: $white;
   }
 
   &__price {
     text-align: center;
-    color: #fff;
+    color: $white;
   }
 }
 

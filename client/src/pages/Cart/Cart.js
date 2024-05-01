@@ -1,5 +1,5 @@
-import Btn from "../../components/UI/Btn/Btn";
-import Container from "../../components/containers/Container/Container";
+import Btn from "@components/UI/Btn/Btn";
+import Container from "@components/containers/Container/Container";
 import "./Cart.scss";
 import ProductsList from "./ProductstList/ProductsList";
 
@@ -18,7 +18,7 @@ const Cart = () => {
         <div className="cart__checkout checkout">
           <Btn title={"Checkout"} color={"#000"} background={"#ffb301"} />
           <div className="checkout__methods">
-            <div>ACCEPTED PAYMENT METHODS</div>
+            <div>Accepted payment methods</div>
             <div>
               <img src={visaUrl} />
               <img src={visaUrl} />

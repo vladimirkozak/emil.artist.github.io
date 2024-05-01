@@ -1,3 +1,5 @@
+@import "@values/Colors.scss";
+
 .header {
   position: fixed;
   top: 0;
@@ -6,8 +8,7 @@
   height: 64px;
   display: flex;
   align-items: center;
-  background: #000;
-  border-bottom: 1px solid #fff;
+  background: rgba($color: $black, $alpha: 0.8);
 
   .navigation {
     display: flex;
@@ -25,7 +26,7 @@
 
     &__link {
       font-weight: 600;
-      color: #ffffff;
+      color: $white;
     }
 
     &__btn-lang {
@@ -35,10 +36,11 @@
       background-color: transparent;
       border: none;
       cursor: pointer;
-      color: #ffffff;
+      color: $white;
     }
 
     &__wrap {
+      position: relative;
       display: flex;
       align-items: center;
     }
@@ -64,7 +66,7 @@
 .logo {
   font-size: 28px;
   font-weight: 700;
-  color: #ffffff;
+  color: $white;
 }
 
 .navigation__link {
@@ -72,7 +74,7 @@
 }
 
 .navigation__link.active {
-  color: #ffb301;
+  color: $orange;
 }
 
 .navigation__right {
