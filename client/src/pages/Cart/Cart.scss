@@ -41,3 +41,12 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .cart {
+    &__image {
+      width: 40%;
+      height: auto;
+    }
+  }
+}

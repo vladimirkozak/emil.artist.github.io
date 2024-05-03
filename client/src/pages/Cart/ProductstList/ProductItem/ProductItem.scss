@@ -7,7 +7,10 @@
 
   &__description {
     display: flex;
-    margin: 30px;
+    margin-top: 30px;
+    margin-right: 14px;
+    margin-bottom: 30px;
+    margin-left: 30px;
     width: 100%;
     justify-content: space-between;
   }
@@ -17,5 +20,16 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-item {
+    &__description {
+      margin-top: 10px;
+      margin-right: 0px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
   }
 }
