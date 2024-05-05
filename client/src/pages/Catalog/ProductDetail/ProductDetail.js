@@ -37,7 +37,7 @@ const ProductDetail = () => {
       <section className="product">
         <div className="product-container">
           <div className="left">
-            <div className="images">
+            {/* <div className="images">
               <img
                 src={DUMMY_CATALOG[0].img}
                 onClick={() => setSelectedImg(0)}
@@ -48,7 +48,7 @@ const ProductDetail = () => {
                 onClick={() => setSelectedImg(1)}
                 alt="detail_img"
               />
-            </div>
+            </div> */}
             <div className="mainImg">
               <img src={DUMMY_CATALOG[selectedImg].img} alt="main_detail_img" />
             </div>
@@ -56,6 +56,12 @@ const ProductDetail = () => {
           <div className="right">
             <h5 className="title">{DUMMY_CATALOG[0].title}</h5>
             <span>{DUMMY_CATALOG[0].price}</span>
+            <div className="desc">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum
+                is simply dummy text of the printing and
+              </p>
+            </div>
             <div className="props">
               <div className="select">
                 <Box sx={{ minWidth: 120 }}>
@@ -106,12 +112,6 @@ const ProductDetail = () => {
                   background={"#ffb301"}
                 />
               </div>
-            </div>
-            <div className="desc">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum
-                is simply dummy text of the printing and
-              </p>
             </div>
           </div>
         </div>
