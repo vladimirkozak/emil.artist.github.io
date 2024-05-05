@@ -99,7 +99,12 @@ const ProductDetail = () => {
                 </Stack>
               </div>
               <div className="add-to-cart">
-                <Btn title={t("cart.addToCart")} onClick={onClickHandler} background={'#ffb301'} />
+                <Btn
+                  title={t("cart.addToCart")}
+                  onClick={onClickHandler}
+                  color={"black"}
+                  background={"#ffb301"}
+                />
               </div>
             </div>
             <div className="desc">
