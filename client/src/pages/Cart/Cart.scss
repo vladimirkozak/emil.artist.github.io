@@ -29,15 +29,18 @@
   .cart {
     grid-template-columns: repeat(1, 1fr);
 
-    &__products {
-      margin-right: 20px;
-      margin-left: 20px;
+    .cart__products {
+      margin-right: 0;
     }
+    // &__products {
+    //   margin-right: 20px;
+    //   margin-left: 20px;
+    // }
 
     &__checkout {
       margin-top: 20px;
-      margin-right: 20px;
-      margin-left: 20px;
+      //   margin-right: 20px;
+      margin-left: 0;
     }
   }
 }

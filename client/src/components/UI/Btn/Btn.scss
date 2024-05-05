@@ -12,7 +12,7 @@
   cursor: pointer;
   transition: 0.1s opacity ease-in-out;
 
-  &:hover {
-    opacity: 0.4;
+  &:active {
+    opacity: 0.9;
   }
 }
