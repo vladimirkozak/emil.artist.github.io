@@ -1,14 +1,14 @@
-import { DUMMY_CATALOG } from "../../Catalog/testData/data/data";
 import ProductItem from "./ProductItem/ProductItem";
 
-const ProductsList = () => {
+const ProductsList = ({ products }) => {
   return (
     <div>
-      {DUMMY_CATALOG.map((product) => (
+      {products?.map((product) => (
         <ProductItem
           title={product.title}
-          image={product.img}
+          image={process.env.REACT_APP_UPLOAD_URL + product.image}
           price={product.price}
+          quantity={product.quantity}
         />
       ))}
     </div>

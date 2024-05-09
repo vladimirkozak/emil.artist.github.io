@@ -12,6 +12,8 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Container from "@components/containers/Container/Container";
 import useFetch from "@hooks/useFetch";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../redux/cartReducer";
 
 const ProductDetail = () => {
   const id = useParams().id;
@@ -20,15 +22,28 @@ const ProductDetail = () => {
   const [size, setSize] = useState("");
 
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-  // console.log(data?.attributes?.description);
-
   const { t } = useTranslation();
+
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
     setSize(event.target.value);
   };
 
-  const onClickHandler = () => {};
+  // console.log(data.attributes.price);
+
+  const onClickHandler = () => {
+    dispatch(
+      addToCart({
+        id: data.id,
+        title: data.attributes.title,
+        desc: data.attributes.description,
+        price: data.attributes.price,
+        image: data.attributes.image.data.attributes.url,
+        quantity,
+      })
+    );
+  };
 
   return (
     <Container>

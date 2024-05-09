@@ -2,10 +2,20 @@ import Btn from "@components/UI/Btn/Btn";
 import Container from "@components/containers/Container/Container";
 import "./Cart.scss";
 import ProductsList from "./ProductstList/ProductsList";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
+  const products = useSelector((state) => state.cart.products);
   const visaUrl =
     "https://www.adidas.com/static/checkout/react/9d5ad96/assets/img/accepted-payment-methods/icon-adidas-visa.svg";
+
+  const total = () => {
+    let total = 0;
+    products.array.forEach((item) => {
+      total += item.quantity * item.price;
+      return total.toFixed(2);
+    });
+  };
 
   return (
     <Container>
@@ -13,7 +23,7 @@ const Cart = () => {
       <div className="cart">
         <div className="cart__products">
           <div>total: 3 items</div>
-          <ProductsList />
+          <ProductsList products={products} />
         </div>
         <div className="cart__checkout checkout">
           <Btn title={"Checkout"} color={"#000"} background={"#ffb301"} />
