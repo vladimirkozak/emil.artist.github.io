@@ -47,51 +47,31 @@ const Navbar = () => {
         <nav className="navigation">
           <ul className="navigation__list">
             <li className="navigation__item">
-              <NavLink
-                to="/catalog"
-                activeClassName="active"
-                className="navigation__link"
-              >
+              <NavLink to="/catalog" className="navigation__link">
                 {t("navbar.shop")}
               </NavLink>
             </li>
 
             <li className="navigation__item">
-              <NavLink
-                to="/calendar"
-                activeClassName="active"
-                className="navigation__link"
-              >
+              <NavLink to="/calendar" className="navigation__link">
                 {t("navbar.calendar")}
               </NavLink>
             </li>
 
             <li className="navigation__item">
-              <NavLink
-                to="/about"
-                activeClassName="active"
-                className="navigation__link"
-              >
+              <NavLink to="/about" className="navigation__link">
                 {t("navbar.about")}
               </NavLink>
             </li>
 
             <li className="navigation__item">
-              <NavLink
-                to="/faq"
-                activeClassName="active"
-                className="navigation__link"
-              >
+              <NavLink to="/faq" className="navigation__link">
                 {t("navbar.FAQ")}
               </NavLink>
             </li>
 
             <li className="navigation__item">
-              <NavLink
-                to="/contacts"
-                activeClassName="active"
-                className="navigation__link"
-              >
+              <NavLink to="/contacts" className="navigation__link">
                 {t("navbar.contacts")}
               </NavLink>
             </li>
@@ -109,11 +89,7 @@ const Navbar = () => {
               </button>
             </li>
             <li className="navigation__item">
-              <NavLink
-                to="/cart"
-                activeClassName="active"
-                className="navigation__link"
-              >
+              <NavLink to="/cart" className="navigation__link">
                 <button className="navigation__btn-lang">
                   <div className="navigation__wrap">
                     <Counter count={productsFromCart.length} />

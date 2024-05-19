@@ -22,11 +22,12 @@ const Cart = () => {
       <h2>Your cart</h2>
       <div className="cart">
         <div className="cart__products">
-          <div>total: 3 items</div>
+          <div>total: {products.length} items</div>
           <ProductsList products={products} />
         </div>
         <div className="cart__checkout checkout">
           <div className="total">
+            <h3>Order summary</h3>
             <span>${totalPrice()}</span>
           </div>
           <Btn title={"Checkout"} color={"#000"} background={"#ffb301"} />
