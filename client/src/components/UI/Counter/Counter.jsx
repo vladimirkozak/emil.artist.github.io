@@ -1,7 +1,7 @@
 import "./Counter.scss";
 
-const Counter = () => {
-  return <div className="counter">3</div>;
+const Counter = ({ count }) => {
+  return <div className="counter">{count}</div>;
 };
 
 export default Counter;

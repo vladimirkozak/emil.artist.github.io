@@ -9,12 +9,12 @@ const Cart = () => {
   const visaUrl =
     "https://www.adidas.com/static/checkout/react/9d5ad96/assets/img/accepted-payment-methods/icon-adidas-visa.svg";
 
-  const total = () => {
+  const totalPrice = () => {
     let total = 0;
-    products.array.forEach((item) => {
+    products.forEach((item) => {
       total += item.quantity * item.price;
-      return total.toFixed(2);
     });
+    return total.toFixed(2);
   };
 
   return (
@@ -26,6 +26,9 @@ const Cart = () => {
           <ProductsList products={products} />
         </div>
         <div className="cart__checkout checkout">
+          <div className="total">
+            <span>${totalPrice()}</span>
+          </div>
           <Btn title={"Checkout"} color={"#000"} background={"#ffb301"} />
           <div className="checkout__methods">
             <div>Accepted payment methods</div>

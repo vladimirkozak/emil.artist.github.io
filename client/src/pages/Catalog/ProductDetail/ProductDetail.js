@@ -13,7 +13,7 @@ import Button from "@mui/material/Button";
 import Container from "@components/containers/Container/Container";
 import useFetch from "@hooks/useFetch";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/cartReducer";
+import { addToCart } from "@redux/cartReducer";
 
 const ProductDetail = () => {
   const id = useParams().id;

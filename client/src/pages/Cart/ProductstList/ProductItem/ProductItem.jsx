@@ -1,7 +1,11 @@
+import { useDispatch } from "react-redux";
 import "./ProductItem.scss";
 import CloseIcon from "@mui/icons-material/Close";
+import { removeItem } from "@redux/cartReducer";
 
-const ProductItem = ({ title, image, price, quantity }) => {
+const ProductItem = ({ id, title, image, price, quantity }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="cart-item">
       <img src={image} className="cart__image" />
@@ -12,7 +16,10 @@ const ProductItem = ({ title, image, price, quantity }) => {
           <p>quantity: {quantity}</p>
         </div>
 
-        <button className="cart-item__close">
+        <button
+          className="cart-item__close"
+          onClick={() => dispatch(removeItem(id))}
+        >
           <CloseIcon />
         </button>
       </div>

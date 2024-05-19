@@ -5,6 +5,7 @@ const ProductsList = ({ products }) => {
     <div>
       {products?.map((product) => (
         <ProductItem
+          id={product.id}
           title={product.title}
           image={process.env.REACT_APP_UPLOAD_URL + product.image}
           price={product.price}

@@ -11,6 +11,7 @@ module.exports = {
       "@pages": resolvePath("./src/pages"),
       "@layout": resolvePath("./src/Layout"),
       "@hooks": resolvePath("./src/hooks"),
+      "@redux": resolvePath("./src/redux"),
     },
   },
 };

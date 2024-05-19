@@ -6,6 +6,7 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { Squash as Hamburger } from "hamburger-react";
 import NavMobile from "./NavMobile/NavMobile";
 import Counter from "@components/UI/Counter/Counter";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const {
@@ -14,6 +15,7 @@ const Navbar = () => {
   } = useTranslation();
   const [lang, setLang] = useState("pl");
   const [isOpen, setIsOpen] = useState(false);
+  const productsFromCart = useSelector((state) => state.cart.products);
 
   const onTapLangHandler = () => {
     setLang(lang === "pl" ? "en" : "pl");
@@ -114,7 +116,7 @@ const Navbar = () => {
               >
                 <button className="navigation__btn-lang">
                   <div className="navigation__wrap">
-                    <Counter />
+                    <Counter count={productsFromCart.length} />
                     <ShoppingBagIcon fontSize="small" />
                   </div>
                 </button>
